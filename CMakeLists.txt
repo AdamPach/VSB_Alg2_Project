@@ -6,4 +6,8 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(ALG_2_Project main.cpp
     PrimeNumbersCounter.cpp
     PrimeNumbersCounter.h
+        IntegerFactorize.cpp
+        IntegerFactorize.h
+        FactorizedInteger.cpp
+        FactorizedInteger.h
 )
