@@ -1,6 +1,8 @@
-#include <iostream>
+#include "PrimeNumbersCounter.h"
+
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    PrimeNumbersCounter primeNumbersCounter(1000);
+    std::vector<int> primeNumbers = primeNumbersCounter.CountPrimeNumbers();
     return 0;
 }
