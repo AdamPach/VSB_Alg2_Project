@@ -11,14 +11,18 @@
 class FactorizedInteger{
 public:
     FactorizedInteger(std::vector<int>* input);
+    FactorizedInteger(std::vector<int>* input, long long tmpSum);
 
-    FactorizedInteger Duplicate();
+    FactorizedInteger* Duplicate();
     void Multiply(FactorizedInteger * multiplyBy);
     bool Compare(FactorizedInteger * compare);
+
+    long long GetSum();
 
     std::vector<int> * GetNumbers();
 private:
     std::vector<int> factorizedInteger;
+    long long tmpSum;
     int GetFirstIndexOf(int number);
 };
 

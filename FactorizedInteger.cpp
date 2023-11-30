@@ -12,17 +12,33 @@ FactorizedInteger::FactorizedInteger(std::vector<int> *input)
     {
         factorizedInteger.push_back(num);
     }
+
+    long long sum = 0;
+    for(auto num : factorizedInteger)
+        sum += num;
+    tmpSum = sum;
 }
 
-
-FactorizedInteger FactorizedInteger::Duplicate()
+FactorizedInteger::FactorizedInteger(std::vector<int> *input, long long tmpSum)
 {
-    return FactorizedInteger(&factorizedInteger);
+    factorizedInteger.reserve(input->size());
+
+    for(auto num : *input)
+    {
+        factorizedInteger.push_back(num);
+    }
+
+    this->tmpSum = tmpSum;
+}
+
+FactorizedInteger* FactorizedInteger::Duplicate()
+{
+    return new FactorizedInteger(&factorizedInteger, tmpSum);
 }
 
 void FactorizedInteger::Multiply(FactorizedInteger *multiplyBy)
 {
-    int lastNum = 0, lastIndex ;
+    int lastNum = 0, lastIndex;
 
     for(auto number : *(multiplyBy->GetNumbers()))
     {
@@ -37,6 +53,7 @@ void FactorizedInteger::Multiply(FactorizedInteger *multiplyBy)
         else
             factorizedInteger.insert(factorizedInteger.begin() + lastIndex, number);
     }
+    tmpSum += multiplyBy->GetSum();
 }
 
 int FactorizedInteger::GetFirstIndexOf(int number)
@@ -65,4 +82,8 @@ bool FactorizedInteger::Compare(FactorizedInteger *compare)
             return false;
     }
     return true;
+}
+
+long long FactorizedInteger::GetSum() {
+    return tmpSum;
 }

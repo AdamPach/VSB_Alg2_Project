@@ -12,4 +12,6 @@ add_executable(ALG_2_Project main.cpp
         FactorizedInteger.h
         PowerDuplicityCounter.cpp
         PowerDuplicityCounter.h
+        FactorizedIntegersMap.cpp
+        FactorizedIntegersMap.h
 )

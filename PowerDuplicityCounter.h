@@ -6,21 +6,22 @@
 #define ALG_2_PROJECT_POWERDUPLICITYCOUNTER_H
 
 #include "IntegerFactorize.h"
+#include "FactorizedIntegersMap.h"
 
 class PowerDuplicityCounter {
 public:
-    PowerDuplicityCounter(IntegerFactorize* integerFactorize, int maxA, int maxB);
+    PowerDuplicityCounter(IntegerFactorize* integerFactorize, FactorizedIntegersMap * map,int maxA, int maxB);
+    ~PowerDuplicityCounter();
 
-    std::vector<FactorizedInteger> Count();
+    int Count();
 private:
-    std::vector<FactorizedInteger> * result;
     IntegerFactorize * integerFactorize;
+    FactorizedIntegersMap * Map;
+
     int minA;
     int minB;
     int maxA;
     int maxB;
-
-    void TryPushBack(FactorizedInteger * newNumber);
 };
 
 
