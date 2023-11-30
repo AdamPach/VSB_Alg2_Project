@@ -1,5 +1,7 @@
+#include <iostream>
 #include "PrimeNumbersCounter.h"
 #include "IntegerFactorize.h"
+#include "PowerDuplicityCounter.h"
 
 
 int main() {
@@ -7,10 +9,10 @@ int main() {
     std::vector<int> primeNumbers = primeNumbersCounter.CountPrimeNumbers();
     IntegerFactorize factorizer(&primeNumbers);
 
-    FactorizedInteger num = factorizer.FactorizeNumber(60);
-    FactorizedInteger num2 = num.Duplicate();
+    PowerDuplicityCounter powerDuplicityCounter(&factorizer, 100,100);
 
-    num.Multiply(&num2);
+    std::vector<FactorizedInteger> result = powerDuplicityCounter.Count();
 
+    std::cout << "Count of unique numbers: " << result.size() << std::endl;
     return 0;
 }

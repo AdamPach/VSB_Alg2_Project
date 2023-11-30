@@ -10,4 +10,6 @@ add_executable(ALG_2_Project main.cpp
         IntegerFactorize.h
         FactorizedInteger.cpp
         FactorizedInteger.h
+        PowerDuplicityCounter.cpp
+        PowerDuplicityCounter.h
 )
