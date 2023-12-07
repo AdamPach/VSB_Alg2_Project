@@ -4,7 +4,7 @@
 
 #include "FactorizedInteger.h"
 
-FactorizedInteger::FactorizedInteger(std::vector<int> *input)
+FactorizedInteger::FactorizedInteger(std::vector<short> *input)
 {
     factorizedInteger.reserve(input->size());
 
@@ -19,7 +19,7 @@ FactorizedInteger::FactorizedInteger(std::vector<int> *input)
     tmpSum = sum;
 }
 
-FactorizedInteger::FactorizedInteger(std::vector<int> *input, long long tmpSum)
+FactorizedInteger::FactorizedInteger(std::vector<short> *input, long long tmpSum)
 {
     factorizedInteger.reserve(input->size());
 
@@ -66,7 +66,7 @@ int FactorizedInteger::GetFirstIndexOf(int number)
     return -1;
 }
 
-std::vector<int> *FactorizedInteger::GetNumbers()
+std::vector<short> *FactorizedInteger::GetNumbers()
 {
     return &factorizedInteger;
 }
@@ -84,6 +84,7 @@ bool FactorizedInteger::Compare(FactorizedInteger *compare)
     return true;
 }
 
-long long FactorizedInteger::GetSum() {
+long long FactorizedInteger::GetSum()
+{
     return tmpSum;
 }

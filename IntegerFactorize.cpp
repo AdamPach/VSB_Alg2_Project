@@ -11,7 +11,7 @@ IntegerFactorize::IntegerFactorize(std::vector<int> *primeNumbers)
 
 FactorizedInteger IntegerFactorize::FactorizeNumber(int number)
 {
-    std::vector<int> factorizedNumber;
+    std::vector<short> factorizedNumber;
     factorizedNumber.reserve(number);
 
     int numberCopy = number;

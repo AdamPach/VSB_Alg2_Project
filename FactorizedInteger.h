@@ -7,11 +7,10 @@
 
 
 #include <vector>
-
 class FactorizedInteger{
 public:
-    FactorizedInteger(std::vector<int>* input);
-    FactorizedInteger(std::vector<int>* input, long long tmpSum);
+    FactorizedInteger(std::vector<short>* input);
+    FactorizedInteger(std::vector<short>* input, long long tmpSum);
 
     FactorizedInteger* Duplicate();
     void Multiply(FactorizedInteger * multiplyBy);
@@ -19,9 +18,9 @@ public:
 
     long long GetSum();
 
-    std::vector<int> * GetNumbers();
+    std::vector<short> * GetNumbers();
 private:
-    std::vector<int> factorizedInteger;
+    std::vector<short> factorizedInteger;
     long long tmpSum;
     int GetFirstIndexOf(int number);
 };
