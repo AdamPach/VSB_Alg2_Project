@@ -4,6 +4,11 @@
 
 #include "FactorizedIntegersMap.h"
 
+/**
+ * @brief Construct a new Factorized Integers Map:: Factorized Integers Map object
+ * 
+ * @param DefaultSize Set a maximal ammount in the Map
+ */
 FactorizedIntegersMap::FactorizedIntegersMap(int DefaultSize)
 {
     Map = new std::vector<std::vector<FactorizedInteger*>*>(DefaultSize);
@@ -12,6 +17,13 @@ FactorizedIntegersMap::FactorizedIntegersMap(int DefaultSize)
     this->defaultSize = DefaultSize;
 }
 
+/**
+ * @brief Try insert a new integer to the map. The integer is inserted when it's not already in the map
+ * 
+ * @param toInsert Integer to insert
+ * @return true When inserted integer is not in the map and new Integer is inserted
+ * @return false When inserted integer is already in the map
+ */
 bool FactorizedIntegersMap::TryInsert(FactorizedInteger *toInsert)
 {
     std::vector<FactorizedInteger*>* chain = Map->at(toInsert->GetSum() % defaultSize);
@@ -25,6 +37,10 @@ bool FactorizedIntegersMap::TryInsert(FactorizedInteger *toInsert)
     return true;
 }
 
+/**
+ * @brief Destroy the Factorized Integers Map:: Factorized Integers Map object
+ * 
+ */
 FactorizedIntegersMap::~FactorizedIntegersMap()
 {
     for(auto chain : *Map)
@@ -38,6 +54,11 @@ FactorizedIntegersMap::~FactorizedIntegersMap()
     delete Map;
 }
 
+/**
+ * @brief Return a exact amount of the Integers in the map
+ * 
+ * @return int 
+ */
 int FactorizedIntegersMap::Count()
 {
     int count = 0;

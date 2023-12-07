@@ -4,11 +4,21 @@
 
 #include "PrimeNumbersCounter.h"
 
+/**
+ * @brief Construct a new Prime Numbers Counter:: Prime Numbers Counter object
+ * 
+ * @param maxNumber Maximum searched Prime Number
+ */
 PrimeNumbersCounter::PrimeNumbersCounter(int maxNumber)
 {
     this->maxNumber = maxNumber;
 }
 
+/**
+ * @brief Count all prime numbers
+ * 
+ * @return std::vector<int> List of prime numbers
+ */
 std::vector<int> PrimeNumbersCounter::CountPrimeNumbers()
 {
     std::vector<int> primeNumbers;

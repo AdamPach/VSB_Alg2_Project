@@ -7,6 +7,11 @@
 
 #include "FactorizedInteger.h"
 
+
+/**
+ * @brief Serves as a non duplicity storage for the Integers
+ * 
+ */
 class FactorizedIntegersMap{
 public:
     FactorizedIntegersMap(int DefaultSize);

@@ -9,6 +9,10 @@
 #include <vector>
 #include "FactorizedInteger.h"
 
+/**
+ * @brief 
+ * 
+ */
 class IntegerFactorize {
 public:
     IntegerFactorize(std::vector<int> * primeNumbers);

@@ -7,6 +7,11 @@
 
 
 #include <vector>
+
+/**
+ * @brief Represent a factorized integer
+ * 
+ */
 class FactorizedInteger{
 public:
     FactorizedInteger(std::vector<short>* input);

@@ -17,7 +17,7 @@ int main() {
 
     auto start = std::chrono::high_resolution_clock::now();
 
-    PrimeNumbersCounter primeNumbersCounter(1000);
+    PrimeNumbersCounter primeNumbersCounter(maxA);
     std::vector<int> primeNumbers = primeNumbersCounter.CountPrimeNumbers();
     IntegerFactorize factorizer(&primeNumbers);
 

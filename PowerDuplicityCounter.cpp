@@ -5,6 +5,14 @@
 #include <iostream>
 #include "PowerDuplicityCounter.h"
 
+/**
+ * @brief Construct a new Power Duplicity Counter:: Power Duplicity Counter object
+ * 
+ * @param integerFactorize Dependency for Factorizing integer
+ * @param map Storage for the Integers
+ * @param maxA Max A
+ * @param maxB Max B
+ */
 PowerDuplicityCounter::PowerDuplicityCounter(IntegerFactorize *integerFactorize, FactorizedIntegersMap * map, int maxA, int maxB)
 {
     this->integerFactorize = integerFactorize;
@@ -17,6 +25,12 @@ PowerDuplicityCounter::PowerDuplicityCounter(IntegerFactorize *integerFactorize,
     Map = map;
 }
 
+
+/**
+ * @brief Count all values
+ * 
+ * @return int Amount of unique integers
+ */
 int PowerDuplicityCounter::Count()
 {
     for(int i = minA; i <= maxA; i++)

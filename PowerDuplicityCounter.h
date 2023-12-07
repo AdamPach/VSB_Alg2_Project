@@ -8,6 +8,11 @@
 #include "IntegerFactorize.h"
 #include "FactorizedIntegersMap.h"
 
+
+/**
+ * @brief Serves as a wrapper of counting logic
+ * 
+ */
 class PowerDuplicityCounter {
 public:
     PowerDuplicityCounter(IntegerFactorize* integerFactorize, FactorizedIntegersMap * map,int maxA, int maxB);

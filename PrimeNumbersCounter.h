@@ -8,6 +8,10 @@
 
 #include <vector>
 
+/**
+ * @brief Handle logic for counting Prime Numbers
+ * 
+ */
 class PrimeNumbersCounter {
 public:
     PrimeNumbersCounter(int maxNumber);
